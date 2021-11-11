@@ -2,10 +2,32 @@ Package: adass
 Type: Package
 Title: What the Package Does (Title Case)
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: c(
+    person("Fabio", "Centofanti", 
+      email = "fabio.centofanti@unina.it", 
+      role = c("cre","aut")),
+    person("Antonio", "Lepore", role = c("aut")), 
+    person("Alessandra", "Menafoglio", role = c("aut")), 
+    person("Biagio", "Palumbo", role = c("aut")), 
+    person("Simone", "Vantini", role = c("aut"))
+    )
+Description: Implements the adaptive smoothing spline estimator for the function-on-function linear regression model described in Centofanti et al. (2020) <arXiv:2007.00529>.
+License: GPL-3
 Encoding: UTF-8
-LazyData: true
+Depends:
+     fda,
+     parallel,
+     fda.usc,
+     fdapace,
+     matrixcalc,
+     matrixStats,
+     SparseM,
+     mvtnorm
+URL: https://github.com/unina-sfere/adass
+BugReports: https://github.com/unina-sfere/adass
+SystemRequirements: GNU make
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat
+Roxygen: list(markdown = TRUE)
