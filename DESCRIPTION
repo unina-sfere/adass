@@ -1,8 +1,8 @@
 Package: adass
 Type: Package
-Title: What the Package Does (Title Case)
-Version: 0.1.0
-Author: c(
+Title: AdaSS Estimator for the Function-on-Function Linear Regression
+Version: 1.0.0
+Authors@R: c(
     person("Fabio", "Centofanti", 
       email = "fabio.centofanti@unina.it", 
       role = c("cre","aut")),
@@ -11,18 +11,17 @@ Author: c(
     person("Biagio", "Palumbo", role = c("aut")), 
     person("Simone", "Vantini", role = c("aut"))
     )
-Description: Implements the adaptive smoothing spline estimator for the function-on-function linear regression model described in Centofanti et al. (2020) <arXiv:2007.00529>.
+Description: Implements the adaptive smoothing spline estimator for the function-on-function linear regression model described in Centofanti et al. (2020) <arXiv:2011.12036>.
 License: GPL-3
 Encoding: UTF-8
-Depends:
+Imports:
      fda,
      parallel,
-     fda.usc,
-     fdapace,
      matrixcalc,
-     matrixStats,
      SparseM,
-     mvtnorm
+     mvtnorm,
+     Rfast,
+     plot3D
 URL: https://github.com/unina-sfere/adass
 BugReports: https://github.com/unina-sfere/adass
 SystemRequirements: GNU make
@@ -31,3 +30,4 @@ Suggests:
     rmarkdown,
     testthat
 Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
