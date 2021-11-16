@@ -99,7 +99,7 @@ The resulting estimator is plotted as follows.
 plot(mod_adass)
 ```
 
-<img src="./man/Figures/mod_adass.png" width="100%" />
+<img src="./man/figures/mod_adass.png" width="100%" />
 
 # References
 

@@ -85,7 +85,7 @@ plot(mod_adass)
 ``` 
 
 ```{r,echo=FALSE}
-knitr::include_graphics("./man/Figures/mod_adass.png",dpi = 10000)
+knitr::include_graphics("./man/figures/mod_adass.png",dpi = 10000)
 ```
 
 # References
