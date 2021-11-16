@@ -10,11 +10,11 @@ Implements the adaptive smoothing spline estimator for the function-on-function 
 }
 \details{
 \tabular{ll}{
-Package: \tab slasso\cr
+Package: \tab adass\cr
 Type: \tab Package\cr
 Version: \tab 1.0.0 \cr
 Date: \tab  2021-11-16 \cr
-License: \tab GPL (>= 3)\cr
+License: \tab GPL-3\cr
 }
 }
 \examples{

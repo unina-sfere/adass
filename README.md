@@ -77,7 +77,7 @@ beta_der_eval_t<-fda::eval.bifd(grid_s,grid_t,mod_smooth$Beta_hat_fd,tLfdobj = 2
 ```
 
 Then, we apply the EAASS algorithm through the `adass.fr_eaass` function
-to identify the optimal combination of tuning paramters.
+to identify the optimal combination of tuning parameters.
 
 ``` r
 mod_adass_eaass<-adass.fr_eaass(Y_fd,X_fd,basis_s,basis_t,

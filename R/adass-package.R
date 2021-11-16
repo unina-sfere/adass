@@ -3,11 +3,11 @@
 #' @details
 #'
 #'\tabular{ll}{
-#'Package: \tab slasso\cr
+#'Package: \tab adass\cr
 #'Type: \tab Package\cr
-#'Version: \tab `r packageVersion("slasso")` \cr
+#'Version: \tab `r packageVersion("adass")` \cr
 #'Date: \tab  `r Sys.Date()` \cr
-#'License: \tab `r packageDescription("slasso", fields="License")`\cr
+#'License: \tab `r packageDescription("adass", fields="License")`\cr
 #'}
 #'
 #' @author Fabio Centofanti, Antonio Lepore, Alessandra Menafoglio, Biagio Palumbo, Simone Vantini
