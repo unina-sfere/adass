@@ -38,7 +38,8 @@ jobs:
       R_KEEP_PKG_SOURCE: yes
 
     steps:
-    - name: Install XQuartz on macOS
+
+      - name: Install XQuartz on macOS
         if: runner.os == 'macOS'
         run: brew install xquartz --cask
 
