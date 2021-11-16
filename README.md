@@ -4,6 +4,9 @@
 # adass
 
 <!-- badges: start -->
+
+[![R build
+status](https://github.com/unina-sfere/adass/workflows/R-CMD-check/badge.svg)](https://github.com/unina-sfere/adass/actions)
 <!-- badges: end -->
 
 The package **adass** implements the adaptive smoothing spline (AdaSS)

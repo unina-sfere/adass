@@ -2,7 +2,7 @@
 % Please edit documentation in R/adass_functions.R
 \name{adass.fr_eaass}
 \alias{adass.fr_eaass}
-\title{Evolutionary algorithm for the adaptive smoothing spline estimator.}
+\title{Evolutionary algorithm for the adaptive smoothing spline estimator (EAASS).}
 \usage{
 adass.fr_eaass(
   Y_fd,
@@ -36,10 +36,10 @@ adass.fr_eaass(
 \item{basis_t}{B-splines basis along the \code{t}-direction of class basisfd.}
 
 \item{beta_ders}{Initial estimate of the partial derivative of the coefficient function along the \code{s}-direction.
-Either a matrix or a class basisfd object.}
+Either a matrix or a class basisfd object. If NULL no adaptive penalty is  used along the \code{s}-direction.}
 
 \item{beta_dert}{Initial estimate of the partial derivative of the coefficient function along the \code{t}-direction.
-Either a matrix or a class basisfd object.}
+Either a matrix or a class basisfd object. If NULL no adaptive penalty is used along the \code{t}-direction.}
 
 \item{grid_eval_ders}{Grid of evaluation of the partial derivatives along the \code{s}-direction.}
 

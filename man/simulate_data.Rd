@@ -7,7 +7,7 @@
 simulate_data(scenario, n_obs = 3000)
 }
 \arguments{
-\item{scenario}{A  character strings indicating the scenario considered. It could be "Scenario HAT", "Scenario DAMP", and "Scenario RCHANGE".}
+\item{scenario}{A  character strings indicating the scenario considered. It could be "Scenario HAT", "Scenario DAMP", or "Scenario RCHANGE".}
 
 \item{n_obs}{Number of observations.}
 }
@@ -22,7 +22,7 @@ A list containing the following arguments:
 
 \code{Y_fd}: Response functions.
 
-\code{Beta_vero_fd}: True coefficient function.
+\code{Beta_vero_fd}: The true coefficient function.
 }
 \description{
 Generate synthetic data as in the simulation study of Centofanti et al. (2020).

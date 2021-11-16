@@ -2,12 +2,12 @@
 % Please edit documentation in R/plot_functions.R
 \name{plot.adass}
 \alias{plot.adass}
-\title{Plot the results of  the AdaSD method}
+\title{Plot the results of  the AdaSS method}
 \usage{
 \method{plot}{adass}(x, ...)
 }
 \arguments{
-\item{x}{The output of  either  \code{adass.fr}.}
+\item{x}{The output of   \code{adass.fr}.}
 
 \item{...}{No additional parameters, called for side effects.}
 }

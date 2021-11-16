@@ -1,6 +1,6 @@
 #' @title Simulate data through the function-on-function linear regression model
 #' @description Generate synthetic data as in the simulation study of Centofanti et al. (2020).
-#' @param scenario A  character strings indicating the scenario considered. It could be "Scenario HAT", "Scenario DAMP", and "Scenario RCHANGE".
+#' @param scenario A  character strings indicating the scenario considered. It could be "Scenario HAT", "Scenario DAMP", or "Scenario RCHANGE".
 #' @param n_obs Number of observations.
 #' @return   A list containing the following arguments:
 #'
@@ -12,7 +12,7 @@
 #'
 #'  \code{Y_fd}: Response functions.
 #'
-#'  \code{Beta_vero_fd}: True coefficient function.
+#'  \code{Beta_vero_fd}: The true coefficient function.
 #'
 #' @export
 #' @references
@@ -96,7 +96,7 @@ simulate_data<-function(scenario,n_obs=3000) {
 }
 
 
-#' @title Evolutionary algorithm for the adaptive smoothing spline estimator.
+#' @title Evolutionary algorithm for the adaptive smoothing spline estimator (EAASS).
 #' @description EAASS algorithm to choose the tuning parameters for the AdaSS estimator (Centofanti et al., 2020).
 #' @inheritParams adass.fr
 #' @param X_fd_test  Test set covariate functions. Default is NULL.
@@ -136,18 +136,19 @@ simulate_data<-function(scenario,n_obs=3000) {
 #' data<-simulate_data("Scenario HAT",n_obs=100)
 #' X_fd=data$X_fd
 #' Y_fd=data$Y_fd
-#' basis_s <- fda::create.bspline.basis(c(0,1),nbasis = 10,norder = 4)
-#' basis_t <- fda::create.bspline.basis(c(0,1),nbasis = 10,norder = 4)
+#' basis_s <- fda::create.bspline.basis(c(0,1),nbasis = 5,norder = 4)
+#' basis_t <- fda::create.bspline.basis(c(0,1),nbasis = 5,norder = 4)
 #' mod_smooth <-adass.fr(Y_fd,X_fd,basis_s = basis_s,basis_t = basis_t,tun_par=c(10^-6,10^-6,0,0,0,0))
-#' grid_s<-seq(0,1,length.out = 10)
-#' grid_t<-seq(0,1,length.out = 10)
+#' grid_s<-seq(0,1,length.out = 5)
+#' grid_t<-seq(0,1,length.out = 5)
 #' beta_der_eval_s<-fda::eval.bifd(grid_s,grid_t,mod_smooth$Beta_hat_fd,sLfdobj = 2)
 #' beta_der_eval_t<-fda::eval.bifd(grid_s,grid_t,mod_smooth$Beta_hat_fd,tLfdobj = 2)
 #' mod_adsm<-adass.fr_eaass(Y_fd,X_fd,basis_s,basis_t,
 #'                         beta_ders=beta_der_eval_s, beta_dert=beta_der_eval_t,
 #'                         rand_search_par=list(c(-8,4),c(-8,4),c(0,0.1),c(0,4),c(0,0.1),c(0,4)),
 #'                         grid_eval_ders=grid_s, grid_eval_dert=grid_t,
-#'                         popul_size = 2,ncores=1,iter_num=1)
+#'                         popul_size = 1,ncores=1,iter_num=1)
+#'
 adass.fr_eaass <-function(Y_fd, X_fd, basis_s, basis_t,
                           beta_ders = NULL,beta_dert = NULL, grid_eval_ders=NULL, grid_eval_dert=NULL,
                           rand_search_par = list(c(-4, 4), c(-4, 4), c(0,1,5,10, 15), c(0,1,2,3,4), c(0,1,5,10, 15), c(0,1,2,3,4)),
@@ -281,15 +282,15 @@ adass.fr_eaass <-function(Y_fd, X_fd, basis_s, basis_t,
 
 
 #' @title Adaptive smoothing spline estimator for the function-on-function linear regression model
-#' @description The daptive smoothing spline (AdaSS) estimator for the function-on-function linear regression proposed in Centofanti et al., 2020.
+#' @description The adaptive smoothing spline (AdaSS) estimator for the function-on-function linear regression proposed in Centofanti et al., 2020.
 #' @param Y_fd An object of class fd corresponding to the response functions.
 #' @param X_fd An object of class fd corresponding to the covariate functions.
 #' @param basis_s B-splines basis along the \code{s}-direction of class basisfd.
 #' @param basis_t B-splines basis along the \code{t}-direction of class basisfd.
 #' @param beta_ders Initial estimate of the partial derivative of the coefficient function along the \code{s}-direction.
-#'  Either a matrix or a class basisfd object.
+#'  Either a matrix or a class basisfd object. If NULL no adaptive penalty is  used along the \code{s}-direction.
 #' @param beta_dert Initial estimate of the partial derivative of the coefficient function along the \code{t}-direction.
-#'  Either a matrix or a class basisfd object.
+#'  Either a matrix or a class basisfd object. If NULL no adaptive penalty is used along the \code{t}-direction.
 #' @param grid_eval_ders Grid of evaluation of the partial derivatives along the \code{s}-direction.
 #' @param grid_eval_dert Grid of evaluation of the partial derivatives along the \code{t}-direction.
 #' @param tun_par Vector of tuning parameters.

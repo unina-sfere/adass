@@ -31,10 +31,10 @@ adass.fr(
 \item{basis_t}{B-splines basis along the \code{t}-direction of class basisfd.}
 
 \item{beta_ders}{Initial estimate of the partial derivative of the coefficient function along the \code{s}-direction.
-Either a matrix or a class basisfd object.}
+Either a matrix or a class basisfd object. If NULL no adaptive penalty is  used along the \code{s}-direction.}
 
 \item{beta_dert}{Initial estimate of the partial derivative of the coefficient function along the \code{t}-direction.
-Either a matrix or a class basisfd object.}
+Either a matrix or a class basisfd object. If NULL no adaptive penalty is used along the \code{t}-direction.}
 
 \item{grid_eval_ders}{Grid of evaluation of the partial derivatives along the \code{s}-direction.}
 
@@ -72,7 +72,7 @@ A list containing the following arguments:
 }
 }
 \description{
-The daptive smoothing spline (AdaSS) estimator for the function-on-function linear regression proposed in Centofanti et al., 2020.
+The adaptive smoothing spline (AdaSS) estimator for the function-on-function linear regression proposed in Centofanti et al., 2020.
 }
 \examples{
 library(adass)

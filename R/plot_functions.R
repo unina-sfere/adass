@@ -1,8 +1,7 @@
 
-#' @title Plot the results of  the AdaSD method
+#' @title Plot the results of  the AdaSS method
 #' @description This function provides plots of the AdaSS coefficient function estimate when applied to the output of `adass.fr`.
-#'
-#' @param x The output of  either  `adass.fr`.
+#' @param x The output of   `adass.fr`.
 #' @param ... No additional parameters, called for side effects.
 #' @return No return value, called for side effects.
 #' @rdname plot.slasso
@@ -19,7 +18,6 @@
 #' plot(mod_adass)
 
 plot.adass<-function(x,...){
-
   mod=x
   length_grid=200
   rangevals<-mod$Beta_hat_fd$sbasis$rangeval
