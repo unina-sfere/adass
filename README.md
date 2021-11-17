@@ -82,8 +82,8 @@ to identify the optimal combination of tuning parameters.
 ``` r
 mod_adass_eaass<-adass.fr_eaass(Y_fd,X_fd,basis_s,basis_t,
                       beta_ders=beta_der_eval_s, beta_dert=beta_der_eval_t,
-                      rand_search_par=list(c(-8,4),c(-8,4),c(0,0.1),c(0,4),c(0,0.1),c(0,4)), grid_eval_ders=grid_s,
-                      grid_eval_dert=grid_t,
+                      rand_search_par=list(c(-8,4),c(-8,4),c(0,0.1),c(0,4),c(0,0.1),c(0,4)),
+                      grid_eval_ders=grid_s,grid_eval_dert=grid_t,
                       popul_size = 10,ncores=8,iter_num=5)
 ```
 
