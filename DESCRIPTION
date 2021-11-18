@@ -1,7 +1,7 @@
 Package: adass
 Type: Package
 Title: Adaptive Smoothing Spline (AdaSS) Estimator for the Function-on-Function Linear Regression
-Version: 1.0.0
+Version: 1.0.0.9000
 Authors@R: c(
     person("Fabio", "Centofanti", 
       email = "fabio.centofanti@unina.it", 

@@ -17,6 +17,7 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 ![R build status](https://github.com/unina-sfere/adass/workflows/R-CMD-check/badge.svg)
+[![CRAN status](https://www.r-pkg.org/badges/version/adass)](https://CRAN.R-project.org/package=adass)
 <!-- badges: end -->
 
 The package  **adass** implements the adaptive smoothing spline (AdaSS) estimator for the function-on-function linear regression model proposed by Centofanti et al. (2020).
@@ -30,11 +31,11 @@ The latter executes the evolutionary algorithm for the adaptive smoothing spline
 ## Installation
 
 
-<!-- You can install the released version of slasso from [CRAN](https://CRAN.R-project.org) with: -->
+You can install the released version of **adass** from [CRAN](https://CRAN.R-project.org) with:
 
-<!-- ``` r -->
-<!-- install.packages("slasso") -->
-<!-- ``` -->
+``` r
+install.packages("adass")
+```
 The development version can be installed from [GitHub](https://github.com/) with:
 ``` r
 # install.packages("devtools")
@@ -51,7 +52,6 @@ library(adass)
 Then, we generate the synthetic dataset and build the basis function sets as follows.
 ```r 
 case<-"Scenario HAT"
-n_obs<-150
 data<-simulate_data(case,n_obs=10)
 X_fd <- data$X_fd
 Y_fd <- data$Y_fd

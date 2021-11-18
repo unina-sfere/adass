@@ -7,6 +7,8 @@
 
 ![R build
 status](https://github.com/unina-sfere/adass/workflows/R-CMD-check/badge.svg)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/adass)](https://CRAN.R-project.org/package=adass)
 <!-- badges: end -->
 
 The package **adass** implements the adaptive smoothing spline (AdaSS)
@@ -26,10 +28,12 @@ al. (2020).
 
 ## Installation
 
-<!-- You can install the released version of slasso from [CRAN](https://CRAN.R-project.org) with: -->
-<!-- ``` r -->
-<!-- install.packages("slasso") -->
-<!-- ``` -->
+You can install the released version of **adass** from
+[CRAN](https://CRAN.R-project.org) with:
+
+``` r
+install.packages("adass")
+```
 
 The development version can be installed from
 [GitHub](https://github.com/) with:
@@ -57,7 +61,6 @@ sets as follows.
 
 ``` r
 case<-"Scenario HAT"
-n_obs<-150
 data<-simulate_data(case,n_obs=10)
 X_fd <- data$X_fd
 Y_fd <- data$Y_fd
