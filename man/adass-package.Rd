@@ -6,7 +6,7 @@
 \alias{adass-package}
 \title{Adaptive smoothing spline estimator for the function-on-function linear regression model}
 \description{
-Implements the adaptive smoothing spline estimator for the function-on-function linear regression model described in Centofanti et al. (2023) \url{https://doi.org/10.1007/s00180-022-01223-6}.
+Implements the adaptive smoothing spline estimator for the function-on-function linear regression model described in Centofanti et al. (2023) \doi{10.1007/s00180-022-01223-6}.
 }
 \details{
 \tabular{ll}{
@@ -14,7 +14,7 @@ Package: \tab adass\cr
 Type: \tab Package\cr
 Version: \tab 1.0.1 \cr
 Date: \tab  2024-07-16 \cr
-License: \tab GPL-3\cr
+License: \tab GPL (>= 3) + file LICENSE\cr
 }
 }
 \examples{

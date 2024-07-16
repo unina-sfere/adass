@@ -18,6 +18,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 ![R build status](https://github.com/unina-sfere/adass/workflows/R-CMD-check/badge.svg)
 [![CRAN status](https://www.r-pkg.org/badges/version/adass)](https://CRAN.R-project.org/package=adass)
+<<<<<<< HEAD
 [![R-CMD-check](https://github.com/fabiocentofanti/adass/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/fabiocentofanti/adass/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
