@@ -24,4 +24,4 @@ mod_adass_eaass<-adass.fr_eaass(Y_fd,X_fd,basis_s,basis_t,
 mod_adass <-adass.fr(Y_fd, X_fd, basis_s = basis_s, basis_t = basis_t,
                    tun_par=mod_adass_eaass$tun_par_opt,beta_ders = beta_der_eval_s,
                    beta_dert = beta_der_eval_t,grid_eval_ders=grid_s,grid_eval_dert=grid_t )
-plot(mod_adass)
+# plot(mod_adass)
