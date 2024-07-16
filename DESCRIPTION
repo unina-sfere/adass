@@ -11,8 +11,8 @@ Authors@R: c(
     person("Biagio", "Palumbo", role = c("aut")), 
     person("Simone", "Vantini", role = c("aut"))
     )
-Description: Implements the adaptive smoothing spline estimator for the function-on-function linear regression model described in Centofanti et al. (2023) <https://doi.org/10.1007/s00180-022-01223-6>.
-License: GPL-3
+Description: Implements the adaptive smoothing spline estimator for the function-on-function linear regression model described in Centofanti et al. (2023) <doi:10.1007/s00180-022-01223-6>.
+License: GPL (>= 3) + file LICENSE
 Encoding: UTF-8
 Imports:
      fda,
