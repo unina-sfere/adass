@@ -7,7 +7,6 @@
 
 [![CRAN
 status](https://www.r-pkg.org/badges/version/adass)](https://CRAN.R-project.org/package=adass)
-
 [![R-CMD-check](https://github.com/unina-sfere/adass/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/unina-sfere/adass/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
