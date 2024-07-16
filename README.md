@@ -13,7 +13,7 @@ status](https://www.r-pkg.org/badges/version/adass)](https://CRAN.R-project.org/
 
 The package **adass** implements the adaptive smoothing spline (AdaSS)
 estimator for the function-on-function linear regression model proposed
-by Centofanti et al. (2020). The AdaSS estimator is obtained by the
+by Centofanti et al. (2023). The AdaSS estimator is obtained by the
 optimization of an objective function with two spatially adaptive
 penalties, based on initial estimates of the partial derivatives of the
 regression coefficient function. This allows the proposed estimator to
@@ -24,7 +24,7 @@ domain. The package comprises two main functions `adass.fr` and
 tuning parameters. The latter executes the evolutionary algorithm for
 the adaptive smoothing spline estimator (EAASS) algorithm to select the
 optimal tuning parameter combination as described in Centofanti et
-al. (2020).
+al. (2023).
 
 ## Installation
 
@@ -109,7 +109,7 @@ plot(mod_adass)
 
 # References
 
--   Centofanti, F., Lepore, A., Menafoglio, A., Palumbo, B., Vantini, S.
-    (2020). Adaptive Smoothing Spline Estimator for the
-    Function-on-Function Linear Regression Model. *arXiv preprint
-    arXiv:2011.12036*.
+- Centofanti, F., Lepore, A., Menafoglio, A., Palumbo, B., Vantini, S.
+  (2023). Adaptive Smoothing Spline Estimator for the
+  Function-on-Function Linear Regression Model. *Computational
+  Statistics 38(1), 191–216*.
