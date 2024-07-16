@@ -1,14 +1,8 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
-<<<<<<< HEAD
 ^\.github$
 ^LICENSE\.md$
 ^cran-comments\.md$
 ^README\.Rmd$
-=======
-^LICENSE\.md$
-^README\.Rmd$
-^cran-comments\.md$
-^\.github$
-^CRAN-RELEASE$
->>>>>>> 0a180d603d0c14a684f533fe0625f77d420675db
+
+
