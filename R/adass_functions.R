@@ -202,9 +202,9 @@ adass.fr_eaass <-function(Y_fd, X_fd, basis_s, basis_t,
         vec_par<-lapply(seq(1,length(comb_list_eval[,1])),parr_func)
       }
       else{
-        if(.Platform$OS.type=="unix")
+        if(.Platform$OS.type=="unix"){
           vec_par<-parallel::mclapply(seq(1,length(comb_list_eval[,1])),parr_func,mc.cores = ncores)
-        else{
+        }else{
           cl <- parallel::makeCluster(ncores)
           parallel::clusterExport(cl, c( "comb_list_eval","X_fd","Y_fd","basis_s","basis_t",
                                          "beta_ders","beta_dert","X_fd_test","Y_fd_test",
