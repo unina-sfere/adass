@@ -47,7 +47,7 @@ devtools::install_github("unina-sfere/adass")
 This is a basic example which shows you how to apply the two main
 functions `adass.fr` and `adass.fr_eaass` on a synthetic dataset
 generated as described in the simulation study of Centofanti et
-al. (2020).
+al. (2023).
 
 We start by loading and attaching the **adass** package.
 
